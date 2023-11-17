@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b2c00ac6e0.js" crossorigin="anonymous"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ordersection">
+            <h2><img src="./vegan-burger.png" alt="burgerImg" style="height: 24px;">ORDER BURGER!</h2>
+            <div action="" style="display: flex; flex-direction: column;" class="myform">
+                <label>Choose Base Burger</label>
+                <select name="" id="vegornot">
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non Vegetarian">Non Vegetarian</option>
+                </select>
+                <label>Choose Add On</label>
+                <select name="" id="addon">
+                    <option value="None">None</option>
+                    <option value="Extra Cheese">Extra Cheese</option>
+                    <option value="Extra Chicken">Extra Chicken</option>
+                    <option value="Extra Bell pepper">Extra Bell pepper</option>
+                    <option value="Extra Onion">Extra Onion</option>
+                    <option value="Extra Sauce">Extra Sauce</option>
+                </select>
+                <button id="sub">Place Order</button>
+            </div>
+        </div>
+        <div class="orderqueue">
+            <h2>Order Queue</h2>
+            <div id="ordercontainer">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let i = 1;
+        const sub = document.getElementById('sub');
+        const veg = document.getElementById('vegornot'); 
+        const add = document.getElementById('addon');
+        sub.addEventListener('click',(event)=>{
+            console.log(veg.value);
+            console.log(add.value);
+            createOrder();
+        })
+        let container = document.getElementById('ordercontainer');
+
+        function createOrder(){
+            const card = document.createElement('div');
+            card.classList.add("ordercard");
+            card.innerHTML = `<div class="loading">
+                    </div>
+                    <div class="textcontainer">
+                        <div class="card">Order with ID: <span id="orderId">${i}</span> has been completed <br>Burger base: <span>${veg.value}</span><br>Add On: <span>${add.value}</span></div>
+                    </div>`;
+            container.append(card);
+            i++;
+        }
+        fulfilledPromise
+            .then(result => {
+                sub.addEventListener('click',(event)=>{
+                    console.log(veg.value);
+                    console.log(add.value);
+                    createOrder();
+                }) // Output: Operation successful!
+            })
+            .catch(error => {
+            console.error(error); // This will not be executed in this example
+            });
+    </script>
+</body>
+</html>

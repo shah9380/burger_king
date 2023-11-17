@@ -1,0 +1,112 @@
+/* <div class="container">
+        <div class="ordersection">
+
+        </div>
+        <div class="orderqueue">
+
+        </div>
+    </div> */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./back.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.ordersection{
+    width: 300px;
+    background-color: rgb(152, 119, 119);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1.8rem;
+    height: 350px;
+}
+h2{
+    text-align: center;
+    display: flex;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(251, 211, 160);
+}
+label{
+    font-size: 1.2rem;
+}
+#sub{
+    background-color: rgb(76, 76, 237);
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.orderqueue{
+    width: 300px;
+    background-color: rgb(78, 42, 42);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1.8rem;
+    height: 350px;
+}
+.myform{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#vegornot{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#vegornot{
+    margin-top: 10px;
+}
+#addon{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+select{
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+#ordercontainer{
+    height: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#ordercontainer::-webkit-scrollbar {
+    display: none;
+}
+.ordercard{
+    background-color: rgb(202, 180, 113);
+    border-radius:4px;
+    padding: 10px;
+}
